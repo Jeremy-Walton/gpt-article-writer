@@ -10,6 +10,7 @@ This project demonstrates how to use the OpenAI GPT-3.5 Turbo model, also known 
 ## Prerequisites
 
 * **OpenAI API Key:** You'll need an OpenAI API key to authenticate and interact with the ChatGPT model. You can obtain one from the OpenAI website.
+* **OpenAI Organization Key:** You'll need an OpenAI Organization key to authenticate and interact with the ChatGPT model. You can obtain one from the OpenAI website.
 * **Ruby:** Ruby 3.1.1 needs to be installed.
 
 
@@ -34,6 +35,7 @@ bundle install
 4. Create a `.env_overrides.rb` file in the project directory and add your OpenAI API key
 ```
 ENV['OPENAI_ACCESS_TOKEN'] = 'YOUR_API_KEY'
+ENV['OPENAI_ORGANIZATION_ID'] = 'YOUR_ORGANIZATION_KEY'
 ```
 
 ## Usage
