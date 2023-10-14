@@ -27,12 +27,17 @@ git clone https://github.com/Jeremy-Walton/gpt-article-writer/
 cd gpt-article-writer
 ```
 
-3. Install dependencies
+3. Install Bundler
 ```
-bundle install
+sudo gem install bundler
 ```
 
-4. Create a `.env_overrides.rb` file in the project directory and add your OpenAI API key
+4. Install dependencies
+```
+sudo bundle install
+```
+
+5. Create a `.env_overrides.rb` file in the project directory and add your OpenAI API key
 ```
 ENV['OPENAI_ACCESS_TOKEN'] = 'YOUR_API_KEY'
 ENV['OPENAI_ORGANIZATION_ID'] = 'YOUR_ORGANIZATION_KEY'

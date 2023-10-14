@@ -76,7 +76,7 @@ class ArticleWriter
     response = client.chat(
       parameters: {
         model: 'gpt-3.5-turbo', # Required.
-        messages: [{ role: 'user', content: }], # Required.
+        messages: [{ role: 'user', content: content }], # Required.
         temperature: 0.7
       }
     )
