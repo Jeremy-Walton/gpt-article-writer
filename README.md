@@ -45,10 +45,22 @@ ENV['OPENAI_ORGANIZATION_ID'] = 'YOUR_ORGANIZATION_KEY'
 
 ## Usage
 
+### Article
+
 To use this project to generate articles, follow these steps:
 
-Run `ruby main.rb`
+Run `ruby article_generator.rb`
 
 Follow the prompt to provide a topic or keyword, and the article draft will be displayed.
 
 It will generate a raw text version as well as an HTML version of the article draft in the articles folder.
+
+### Image
+
+To use this project to generate images, follow these steps:
+
+Run `ruby image_generator.rb`
+
+Follow the prompt to provide a text prompt.
+
+It will generate a url with the generated image.
