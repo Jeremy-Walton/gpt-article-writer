@@ -37,13 +37,14 @@ class GPTClient
   end
 
   def image(prompt, resolution)
-    size = if resolution.nil? || resolution == ''
-             IMAGE_RESOLUTIONS['256'.to_sym]
-           else
-             IMAGE_RESOLUTIONS[resolution.to_sym]
-           end
+    size = IMAGE_RESOLUTIONS[resolution.to_sym]
 
-           response = client.images.generate(
+    if size.nil?
+      puts 'Invalid resolution. Defaulted to 256.'
+      size = IMAGE_RESOLUTIONS['256'.to_sym]
+    end
+
+    response = client.images.generate(
       parameters: { prompt: prompt, size: size }
     )
     response.dig('data', 0, 'url')
